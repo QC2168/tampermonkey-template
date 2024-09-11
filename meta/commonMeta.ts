@@ -9,5 +9,6 @@ export default {
   "license": "MIT",
   "match": ["*"],
   "grant": "none",
-  "icon": "https://www.google.com/s2/favicons?sz=64&domain=greasyfork.org"
+  "icon": "https://www.google.com/s2/favicons?sz=64&domain=greasyfork.org",
+  "require": "https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"
 }

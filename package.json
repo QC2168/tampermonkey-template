@@ -9,9 +9,12 @@
   ],
   "types": "./index.d.ts",
   "scripts": {
-    "build": "tsc && vite build"
+    "dev": "tsc && vite build --mode watch",
+    "build": "tsc && vite build",
+    "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.30",
     "browserslist": "^4.23.3",
     "typescript": "^5.4.5",
     "vite": "^5.2.10",
