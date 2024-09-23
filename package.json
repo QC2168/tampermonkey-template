@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@types/jquery": "^3.5.30",
+    "@types/node": "^22.5.5",
     "browserslist": "^4.23.3",
     "typescript": "^5.4.5",
     "vite": "^5.2.10",

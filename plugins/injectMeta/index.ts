@@ -1,10 +1,17 @@
 const year = new Date().getFullYear();
 import commonMeta from '../../meta/commonMeta';
-import path from 'path';
-import { readFileSync, writeFileSync } from 'fs';
+import path from 'node:path';
+import { readFileSync, writeFileSync } from 'node:fs';
 
 const getBanner = (meta = {}) => `// ==UserScript==\n${Object.entries(Object.assign(commonMeta, meta))
-  .map(([key, value]) => `// @${key.padEnd(20, ' ')}${value}`)
+  .map(([key, value]) => {
+    if (Array.isArray(value)) {
+      return value.map(v => `// @${key.padEnd(20, ' ')}${v}`).join('\n')
+    } else {
+      return `// @${key.padEnd(20, ' ')}${value}`
+    }
+
+  })
   .join('\n')}
 // ==/UserScript==
 `;
